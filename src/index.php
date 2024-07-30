@@ -153,11 +153,12 @@ echo 'Hello ' . $name . "\n";
 //var_dump($x xor $y);
 //var_dump(!$x);
 
-$x = 5; //6
-$x = ++$x + $x++ + --$x;
-
-echo $x . PHP_EOL;
+//$x = 5; //6
+//$x = ++$x + $x++ + --$x;
+//
 //echo $x . PHP_EOL;
+//echo $x . PHP_EOL;
+
 
 
 
