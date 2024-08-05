@@ -159,7 +159,41 @@ echo 'Hello ' . $name . "\n";
 //echo $x . PHP_EOL;
 //echo $x . PHP_EOL;
 
-echo 'test';
+//echo 'test';
+
+
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="server.php" method="POST">
+        <input type="text" name="name">
+        <input type="number" min="0" max="100" step="1" name="age">
+        <h3>Hobbies</h3>
+        <div>
+            <label>Sport</label>
+            <input type="checkbox" name="hobbies[active][]" value="sport">
+        </div>
+        <div>
+            <label>Fishing</label>
+            <input type="checkbox" name="hobbies[active][]" value="fishing">
+        </div>
+        <div>
+            <label>PC games</label>
+            <input type="checkbox" name="hobbies[]" value="pc games">
+        </div>
+        <input type="submit">
+    </form>
+</body>
+</html>
 
 
 
