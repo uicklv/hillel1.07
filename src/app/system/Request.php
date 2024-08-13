@@ -11,4 +11,9 @@ class Request
     {
         return $_SERVER['REQUEST_URI'];
     }
+
+    public static function referer(): string
+    {
+        return $_SERVER['HTTP_REFERER'];
+    }
 }

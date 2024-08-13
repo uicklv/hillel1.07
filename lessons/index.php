@@ -234,7 +234,7 @@ echo 'Hello ' . $name . "\n";
 </head>
 <body>
     <h3>Get response form </h3>
-    <form action="server.php" method="POST" enctype="multipart/form-data">
+    <form action="index.php" method="POST" enctype="multipart/form-data">
         <div>
             <label>Json</label>
             <input type="radio" name="response_type" value="json">

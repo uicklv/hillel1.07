@@ -46,8 +46,8 @@
 
 use lesson8\File;
 
-require_once __DIR__  . '/File.php';
-require_once __DIR__  . '/FileType.php';
+require_once __DIR__ . '/File.php';
+require_once __DIR__ . '/FileType.php';
 
 try {
 

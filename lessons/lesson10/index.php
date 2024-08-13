@@ -3,13 +3,13 @@
 
 use lesson10\UserController;
 
-require_once  'Person.php';
-require_once  'File.php';
-require_once  'Document.php';
-require_once  'Test.php';
-require_once  'ArrayHelper.php';
-require_once  'Controller.php';
-require_once  'UserController.php';
+require_once 'Person.php';
+require_once 'File.php';
+require_once 'Document.php';
+require_once 'Test.php';
+require_once 'ArrayHelper.php';
+require_once 'Controller.php';
+require_once 'UserController.php';
 
 //$person = new Person('John', 25);
 
