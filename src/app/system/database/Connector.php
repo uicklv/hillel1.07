@@ -24,3 +24,5 @@ class Connector
     }
 
 }
+
+//SOLID

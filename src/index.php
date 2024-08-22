@@ -13,6 +13,10 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', 'password');
 
 require_once APP_DIR . 'app/system/database/Connector.php';
+require_once APP_DIR . 'app/system/database/SQLQueryBuilder.php';
+require_once APP_DIR . 'app/system/database/MySqlQueryBuilder.php';
+require_once APP_DIR . 'app/system/database/Models/Model.php';
+require_once APP_DIR . 'app/system/database/Models/UserModel.php';
 require_once APP_DIR . 'app/system/Cookie.php';
 require_once APP_DIR . 'app/system/Session.php';
 require_once APP_DIR . 'app/system/Request.php';
@@ -28,3 +32,27 @@ Cookie::set('mycookie', 'lesson is over');
 Router::process(HttpMethod::from(Request::method()), Request::url());
 
 
+
+//DRY
+//KISS
+//YAGNI
+
+
+class Discount
+{
+    public int $price = 100;
+    public function calculate(float $amount)
+    {
+        return $amount - $this->price;
+    }
+}
+
+class Delivery
+{
+    public int $price = 100;
+
+    public function calculate(float $amount)
+    {
+        return $amount - $this->price;
+    }
+}
