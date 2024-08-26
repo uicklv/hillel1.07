@@ -9,7 +9,12 @@ class Request
 
     public static function url(): string
     {
-        return $_SERVER['REQUEST_URI'];
+        $url = $_SERVER['REQUEST_URI'];
+        if (($pos = strpos($url, '?')) !== false) {
+            $url = substr($url, 0, $pos);
+        }
+
+        return $url;
     }
 
     public static function referer(): string

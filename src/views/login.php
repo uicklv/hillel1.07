@@ -9,8 +9,28 @@
 </head>
 <body>
 <h3>Login form</h3>
-<form>
-
+<?php
+if ($message = getSessionMessage('success_register')) {
+    echo '<p style="color: green;">' . $message . '</p>';
+}
+?>
+<?php
+if ($message = getSessionMessage('login_error')) {
+    echo '<p style="color: red;">' . $message . '</p>';
+}
+?>
+<form action="<?= url('login') ?>" method="POST">
+    <div>
+        <input type="email" name="email" placeholder="Email" required>
+        <?php showValidationError('email')  ?>
+    </div>
+    <div>
+        <input type="password" name="password" placeholder="Password">
+        <?php showValidationError('password')  ?>
+    </div>
+    <div>
+        <input type="submit" value="Login">
+    </div>
 </form>
 </body>
 </html>
